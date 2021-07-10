@@ -47,7 +47,7 @@ public class Debug {
         //方法断点
         method();
         //异常断点
-        exception();
+        //exception();
         //字段断点
         field();
         method1();
