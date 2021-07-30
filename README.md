@@ -37,6 +37,6 @@ Field req = request.getClass().getDeclaredField("request");
 
 由于Request类是在tomcat中的lib库中，所以，你需要手动导包
 
-![image-20210730224415912](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210730224415912.png)
+![](.\image\info.png)
 
 还在努力中。。。
