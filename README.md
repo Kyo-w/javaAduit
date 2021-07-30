@@ -37,6 +37,6 @@ Field req = request.getClass().getDeclaredField("request");
 
 由于Request类是在tomcat中的lib库中，所以，你需要手动导包
 
-![](.\image\info.png)
+![](https://github.com/Kyo-w/javaAduit/blob/master/image/info.png)
 
 还在努力中。。。
