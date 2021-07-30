@@ -1,6 +1,6 @@
 # Java安全
 
-Commons Collection：
+## Commons Collection
 
 环境:JDK1.7(推荐)
 
@@ -13,5 +13,30 @@ Maven:
             <version>3.2</version>
         </dependency>
 ```
+
+## tomcat内存马
+
+2021/7/30
+
+环境:tomcat7
+
+运行时需要注意的
+
+### 一、filter
+
+在测试恶意的index.jsp时，请注释掉web.xml关于FilterDemo所有的filter-mapping，因为两个自定义的filter都直接返回响应体，index.jsp此时无法接收这样的响应体，所以会报错
+
+### 二、导包
+
+```java
+Field req = request.getClass().getDeclaredField("request");
+    req.setAccessible(true);
+    Request request1 = (Request) req.get(request);
+    StandardContext context = (StandardContext) request1.getContext();
+```
+
+由于Request类是在tomcat中的lib库中，所以，你需要手动导包
+
+![image-20210730224415912](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210730224415912.png)
 
 还在努力中。。。
