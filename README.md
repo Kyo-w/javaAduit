@@ -40,3 +40,9 @@ Field req = request.getClass().getDeclaredField("request");
 ![](https://github.com/Kyo-w/javaAduit/blob/master/image/info.png)
 
 还在努力中。。。
+
+## Spring Data Rest
+
+
+
+请根据系统版本修改active
