@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: windows
+---
+spring:
+  datasource:
+    url: jdbc:h2:file:D:/testdb
+  jpa:
+    hibernate:
+      ddl-auto: update
+  profiles: windows
+---
+spring:
+  datasource:
+    url: jdbc:h2:file:/tmp/testdb
+  jpa:
+    hibernate:
+      ddl-auto: update
+  profiles: linux_mac
